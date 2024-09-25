@@ -27,7 +27,8 @@ const Home=()=>{
         <Card.Text>
           {key.description}
         </Card.Text>
-        <Button variant="primary">Add to Cart </Button>
+        <Button variant="primary"
+        onClick={()=>{DataCart(key.id,key.name,key.images,key.desription,key.price)}}>Add to Cart </Button>
       </Card.Body>
     </Card>
     </>

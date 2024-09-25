@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { FaShoppingBag } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 const Topmenu=()=>{
   const navigate=useNavigate();
@@ -24,10 +25,10 @@ const Topmenu=()=>{
           <Nav>
             <Nav.Link href="#deets">
               <FaShoppingBag onClick={()=>{navigate("/cartproduct")}}/>
-
+                {datalength>=1? <span id="tokri">{datalength} </span>:""}
             </Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+              <FaSearch/>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
